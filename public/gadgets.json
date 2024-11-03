@@ -1,0 +1,239 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Anker 20W PowerPort Charger",
+        "product_image": "https://i.ibb.co.com/sQLCZ5V/1.jpg",
+        "category": "Chargers",
+        "price": 19.99,
+        "description": "A compact 20W fast charger with USB-C Power Delivery, ideal for phones and tablets.",
+        "specification": [
+            "20W USB-C Power Delivery",
+            "Compact design",
+            "Overheat protection",
+            "Fast charging"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": 2,
+        "product_title": "Apple MacBook Air M2",
+        "product_image": "https://i.ibb.co.com/yd0pb9D/2.jpg",
+        "category": "Computers",
+        "price": 999.99,
+        "description": "Apple's thin and light laptop with M2 chip, 8GB RAM, and 256GB SSD.",
+        "specification": [
+            "Apple M2 chip",
+            "8GB RAM",
+            "256GB SSD",
+            "13.3-inch Retina display",
+            "macOS"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 3,
+        "product_title": "Samsung Galaxy S21",
+        "product_image": "https://i.ibb.co.com/5vdHBym/3.jpg",
+        "category": "Phones",
+        "price": 699.99,
+        "description": "Samsung's flagship smartphone with a 6.2-inch display and triple camera setup.",
+        "specification": [
+            "Snapdragon 888",
+            "6.2-inch AMOLED display",
+            "Triple camera setup",
+            "5G capable",
+            "128GB storage"
+        ],
+        "availability": false,
+        "rating": 4.5
+    },
+    {
+        "product_id": 4,
+        "product_title": "Dell Inspiron 15 Laptop",
+        "product_image": "https://i.ibb.co.com/PYLRpRz/4.jpg",
+        "category": "Computers",
+        "price": 649.99,
+        "description": "A reliable laptop with Intel Core i5, 8GB RAM, and 256GB SSD.",
+        "specification": [
+            "Intel Core i5",
+            "8GB RAM",
+            "256GB SSD",
+            "15.6-inch FHD display",
+            "Windows 11"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": 5,
+        "product_title": "Fitbit Versa 3",
+        "product_image": "https://i.ibb.co.com/NZdR8Hs/5.jpg",
+        "category": "Smartwatches",
+        "price": 229.99,
+        "description": "A fitness smartwatch with built-in GPS, heart rate monitoring, and 6+ day battery life.",
+        "specification": [
+            "Built-in GPS",
+            "Heart rate monitoring",
+            "Sleep tracking",
+            "6+ day battery life",
+            "Water-resistant"
+        ],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": 6,
+        "product_title": "iPhone 13 Pro",
+        "product_image": "https://i.ibb.co.com/k1tZv5C/6.jpg",
+        "category": "Phones",
+        "price": 999.99,
+        "description": "Apple's iPhone 13 Pro with A15 Bionic, triple 12MP cameras, and 5G capability.",
+        "specification": [
+            "A15 Bionic chip",
+            "128GB storage",
+            "6.1-inch Super Retina XDR display",
+            "Triple 12MP rear cameras",
+            "5G capable"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 7,
+        "product_title": "HP Pavilion x360",
+        "product_image": "https://i.ibb.co.com/Xtfgsbw/7.jpg",
+        "category": "Computers",
+        "price": 549.99,
+        "description": "Convertible laptop with 360-degree hinge, Intel Core i3, and 128GB SSD.",
+        "specification": [
+            "Intel Core i3",
+            "4GB RAM",
+            "128GB SSD",
+            "14-inch touchscreen display",
+            "Windows 11"
+        ],
+        "availability": true,
+        "rating": 4.1
+    },
+    {
+        "product_id": 8,
+        "product_title": "RAVPower 20000mAh Power Bank",
+        "product_image": "https://i.ibb.co.com/2svQsdV/8.jpg",
+        "category": "Power Banks",
+        "price": 35.99,
+        "description": "High-capacity power bank with dual USB outputs for charging multiple devices.",
+        "specification": [
+            "20000mAh capacity",
+            "Dual USB output",
+            "Fast charging support",
+            "LED battery indicator",
+            "Compact design"
+        ],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": 9,
+        "product_title": "Microsoft Surface Laptop 4",
+        "product_image": "https://i.ibb.co.com/pPXRr10/9.jpg",
+        "category": "Computers",
+        "price": 899.99,
+        "description": "Microsoft's ultra-slim laptop with AMD Ryzen 5, 8GB RAM, and 256GB SSD.",
+        "specification": [
+            "AMD Ryzen 5",
+            "8GB RAM",
+            "256GB SSD",
+            "13.5-inch PixelSense display",
+            "Windows 10"
+        ],
+        "availability": false,
+        "rating": 4.7
+    },
+    {
+        "product_id": 10,
+        "product_title": "OnePlus 9",
+        "product_image": "https://i.ibb.co.com/xhYJ3HV/10.jpg",
+        "category": "Phones",
+        "price": 729.99,
+        "description": "High-performance smartphone with Snapdragon 888 and 120Hz Fluid display.",
+        "specification": [
+            "Snapdragon 888",
+            "8GB RAM",
+            "128GB storage",
+            "6.55-inch 120Hz Fluid AMOLED display",
+            "65W fast charging"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": 11,
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/4VhbFS1/11.jpg",
+        "category": "Computers",
+        "price": 1299.99,
+        "description": "A durable business laptop with Intel Core i7, 16GB RAM, and 512GB SSD.",
+        "specification": [
+            "Intel Core i7",
+            "16GB RAM",
+            "512GB SSD",
+            "14-inch FHD display",
+            "Windows 10 Pro"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": 12,
+        "product_title": "Apple Watch Series 7",
+        "product_image": "https://i.ibb.co.com/m65LVzH/12.jpg",
+        "category": "Smartwatches",
+        "price": 399.99,
+        "description": "The latest Apple Watch with larger display and advanced health features.",
+        "specification": [
+            "Always-on Retina display",
+            "ECG and blood oxygen monitoring",
+            "Swim-proof",
+            "Fall detection",
+            "GPS"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": 13,
+        "product_title": "Asus ROG Zephyrus G14",
+        "product_image": "https://i.ibb.co.com/k4cX9zp/13.jpg",
+        "category": "Computers",
+        "price": 1449.99,
+        "description": "Gaming laptop with AMD Ryzen 9, 16GB RAM, and 1TB SSD.",
+        "specification": [
+            "AMD Ryzen 9",
+            "16GB RAM",
+            "1TB SSD",
+            "14-inch QHD display",
+            "NVIDIA GeForce RTX 3060"
+        ],
+        "availability": false,
+        "rating": 4.7
+    },
+    {
+        "product_id": 14,
+        "product_title": "Xiaomi Mi Band 6",
+        "product_image": "https://i.ibb.co.com/NWfYK3p/14.jpg",
+        "category": "Smartwatches",
+        "price": 49.99,
+        "description": "Affordable fitness tracker with AMOLED display and heart rate monitoring.",
+        "specification": [
+            "1.56-inch AMOLED display",
+            "Heart rate monitor",
+            "Sleep tracking",
+            "Water-resistant",
+            "14-day battery life"
+        ],
+        "availability": true,
+        "rating": 4.6
+    }
+]

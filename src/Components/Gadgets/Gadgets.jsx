@@ -1,31 +1,21 @@
-import { useEffect, useState } from "react";
-import Category from "./Category";
+
+import Gadget from "./Gadget";
+import { useLoaderData } from "react-router-dom";
+
 
 
 const Gadgets = () => {
-    const [categories, setCategories] = useState([])
-    useEffect(() => {
-        fetch("/categories.json")
-            .then(res => res.json())
-            .then(data => setCategories(data))
-    }, [])
-    
+    const gadgets = useLoaderData()
+   
+
+
     return (
-        <div>
+        <div className=" grid grid-cols-3 gap-3">
+            {
+                gadgets.map(gadget=> <Gadget key={gadget.id} gadget={gadget}></Gadget>)
+            }
 
-            <div className="flex gap-5 w-10/12 mx-auto">
-
-                <div className="shadow-lg w-3/12 ">
-                    {
-                        categories.map(category => <Category
-                            key={category.id}
-                            category={category}
-                        ></Category>)
-                    }
-                </div>
-                <div className="border-2 h-5 w-9/12"></div>
-
-            </div>
+            
 
         </div>
     );

@@ -1,26 +1,32 @@
 [
     {
         "id": 1,
-        "name": "All Products"
+        "name": "All Products",
+        "categorys": "AllProducts"
     },
     {
         "id": 2,
-        "name": "Computers"
+        "name": "Computers",
+        "categorys": "Computers"
     },
     {
         "id": 3,
-        "name": "Phones"
+        "name": "Phones",
+        "categorys": "Phones"
     },
     {
         "id": 4,
-        "name": "Smartwatches"
+        "name": "Smartwatches",
+        "categorys": "Smartwatches"
     },
     {
         "id": 5,
-        "name": "Chargers"
+        "name": "Chargers",
+        "categorys": "Chargers"
     },
     {
-        "id": 5,
-        "name": "Power Banks"
+        "id": 6,
+        "name": "Power Banks",
+        "categorys": "Power Banks"
     }
 ]
