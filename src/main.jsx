@@ -9,6 +9,9 @@ import Root from './Components/Root';
 
 import Home from './Home';
 import GadgetsCategory from './Components/Gadgets/GadgetsCategory';
+import Statistics from './Components/Statistics';
+import Dashboard from './Components/Dashboard';
+import GadgetsDetails from './Components/Gadgets/GadgetsDetails';
 
 
 const router = createBrowserRouter([
@@ -32,6 +35,20 @@ const router = createBrowserRouter([
             loader: () => fetch('/gadgets.json')
           },
         ]
+      },
+      {
+        path:'/statistice',
+        element:<Statistics></Statistics>
+      },
+      {
+        path:'/dashboard',
+        element:<Dashboard></Dashboard>
+
+      },
+      {
+        path:'/details/:GId',
+        element:<GadgetsDetails></GadgetsDetails>,
+        loader: () => fetch('/gadgets.json')
       }
     ]
   },

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 
 const Gadget = ({ gadget }) => {
-    const {product_title,product_image,price} = gadget
+    const {product_title,product_image,price,product_id} = gadget
     return (
         
             <div class="card bg-base-100  shadow-xl">
@@ -14,7 +14,7 @@ const Gadget = ({ gadget }) => {
                     <h2 class="card-title">{product_title}</h2>
                     <p>Price: {price}K</p>
                     <div class="card-actions justify-start">
-                       <NavLink> <button class="btn btn-outline btn-primary">View Details</button></NavLink>
+                       <NavLink to={`/details/${product_id}`}> <button class="btn btn-outline btn-primary">View Details</button></NavLink>
                     </div>
                 </div>
             </div>
