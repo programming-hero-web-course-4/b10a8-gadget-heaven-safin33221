@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "All Products"
+    },
+    {
+        "id": 2,
+        "name": "Computers"
+    },
+    {
+        "id": 3,
+        "name": "Phones"
+    },
+    {
+        "id": 4,
+        "name": "Smartwatches"
+    },
+    {
+        "id": 5,
+        "name": "Chargers"
+    },
+    {
+        "id": 5,
+        "name": "Power Banks"
+    }
+]

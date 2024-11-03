@@ -1,11 +1,12 @@
-import Banner from "./Banner";
+import Home from "../Home";
+
 
 
 
 const Root = () => {
     return (
         <div>
-            <Banner></Banner>
+            <Home></Home>
         </div>
     );
 };
