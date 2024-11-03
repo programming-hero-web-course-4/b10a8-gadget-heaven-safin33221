@@ -6,25 +6,31 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './Components/Root';
-import Gadgets from './Components/Gadgets/Gadgets';
+
 import Home from './Home';
+import GadgetsCategory from './Components/Gadgets/GadgetsCategory';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>,
-        loader:()=> fetch('/categories.json'),
-        children:[
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('/categories.json'),
+        children: [
           {
-            path:'/',
-            element:<Gadgets></Gadgets>,
-            loader:()=>fetch('/gadgets.json')
-          }
+            path: '/',
+            element: <GadgetsCategory></GadgetsCategory>,
+            loader: () => fetch('/gadgets.json')
+          },
+          {
+            path: '/gadgets/:category',
+            element: <GadgetsCategory></GadgetsCategory>,
+            loader: () => fetch('/gadgets.json')
+          },
         ]
       }
     ]
