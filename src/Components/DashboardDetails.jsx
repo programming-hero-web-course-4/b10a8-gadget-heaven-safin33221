@@ -1,10 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { config } from "localforage";
 
-
-const Gadget = ({ gadget }) => {
-    const { product_title, product_image, price, product_id } = gadget
+const DashboardDetails = ({ products }) => {
+    const { product_title, product_image, price, product_id } = products
+    console.log(products);
     return (
-
         <div class="card bg-base-100  shadow-xl">
             <figure className="w-4/5 mx-auto">
                 <img className=""
@@ -14,12 +13,11 @@ const Gadget = ({ gadget }) => {
                 <h2 class="card-title">{product_title}</h2>
                 <p>Price: {price}K</p>
                 <div class="card-actions justify-start">
-                    <NavLink to={`/details/${product_id}`}> <button class="btn btn-outline btn-primary">View Details</button></NavLink>
+                    
                 </div>
             </div>
         </div>
-
     );
 };
 
-export default Gadget;
+export default DashboardDetails;

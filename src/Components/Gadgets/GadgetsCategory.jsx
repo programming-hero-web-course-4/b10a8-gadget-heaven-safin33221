@@ -13,9 +13,9 @@ const GadgetsCategory = () => {
         if (category) {
             const categoryGadgets = [...data].filter(gadget => gadget.category === category)
             console.log(categoryGadgets);
-            if(category === 'AllProducts'){
+            if (category === 'AllProducts') {
                 setGadget(data)
-            }else{
+            } else {
                 setGadget(categoryGadgets)
             }
         } else {
@@ -28,11 +28,14 @@ const GadgetsCategory = () => {
 
 
     return (
-        <div className="grid grid-cols-3 gap-3">
-            {
-                gadget.map(gadget => <Gadget key={gadget.id} gadget={gadget}></Gadget>)
-            }
-        </div>
+        <>
+            
+            <div className="grid grid-cols-3 gap-3">
+                {
+                    gadget.map(gadget => <Gadget key={gadget.id} gadget={gadget}></Gadget>)
+                }
+            </div>
+        </>
     );
 };
 
