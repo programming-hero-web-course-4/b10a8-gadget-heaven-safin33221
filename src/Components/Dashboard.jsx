@@ -45,7 +45,7 @@ const Dashboard = () => {
 
     const [cartPrice, setCartPrice] = useState(0)
     useEffect(() => {
-        
+
         const sum = cartProducts.reduce((a, b) => a + (b.price || 0), 0);
         setCartPrice(parseFloat(sum).toFixed(2))
     }, [cartProducts])
@@ -53,11 +53,26 @@ const Dashboard = () => {
 
     const [wishPrice, setWishPrice] = useState(0)
     useEffect(() => {
-        
+
         const sum = wishProduct.reduce((a, b) => a + (b.price || 0), 0);
         setWishPrice(parseFloat(sum).toFixed(2))
     }, [cartProducts])
-    
+
+    //sort by price
+    const handleSortBYPriceCart = () => {
+        if(isactive){
+            
+            const sortProduct = [...cartProducts].sort((a, b) => a.price - b.price)
+            setProduct(sortProduct)
+        }else{
+            const sortWishProduct = [...wishProduct].sort((a, b) => a.price - b.price)
+            setWishProduct(sortWishProduct)
+            
+        }
+
+
+    }
+
     return (
         <div>
             <div className="hero bg-[#9538E2] pb-20 text-white">
@@ -83,9 +98,11 @@ const Dashboard = () => {
                     <h1 className='text-lg font-bold'>{`${isactive ? "Cart" : "Wish"}`}</h1>
                 </div>
                 <div className='flex items-center gap-4'>
-                    <p className='font-bold'>Total Cost: {`${isactive?cartPrice:wishPrice}`}</p>
-                <button className='btn btn-outline text-[#9538E2] rounded-3xl'>Sort by price</button>
-                    <button className='btn'>Purchace</button>
+                    <p className='font-bold'>Total Cost: {`${isactive ? cartPrice : wishPrice}`}</p>
+                    <button onClick={() => handleSortBYPriceCart()}
+                        className='btn btn-outline text-[#9538E2] rounded-3xl'>Sort by price</button>
+                    <button 
+                    className='btn bg-[#9538E2] text-white rounded-3xl px-6'>Purchace</button>
                 </div>
             </div>
             <div>
