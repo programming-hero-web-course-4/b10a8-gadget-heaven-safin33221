@@ -10,9 +10,9 @@ const GadgetsCategory = () => {
 
     const [gadget, setGadget] = useState([])
     useEffect(() => {
-        if (category) {
+        if (category ) {
             const categoryGadgets = [...data].filter(gadget => gadget.category === category)
-            console.log(categoryGadgets);
+            
             if (category === 'AllProducts') {
                 setGadget(data)
             } else {
