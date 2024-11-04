@@ -15,7 +15,7 @@ const Cart = ({ cart,handleRemoveCart }) => {
                 <div>
                     <h2 class="card-title">{product_title}</h2>
                     <p>{description}</p>
-                    <p>Price: {price}K</p>
+                    <p>Price: ${price}</p>
                 </div>
                 <div onClick={() =>handleRemoveCart(product_id)} className='px-8'>
                     <button className='text-2xl btn '><MdDeleteOutline /></button>

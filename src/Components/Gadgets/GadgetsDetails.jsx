@@ -1,7 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsTem from "../DetailsTem";
-import { addCartToLs, addWishtToLs } from "../Utils/addToDB";
-import wish from '../../assets/wish.png'
+import { addCartToLs, addWishtToLs, getStoredWish } from "../Utils/addToDB";
+
+import { useEffect, useState } from "react";
+import { FaRegHeart } from "react-icons/fa";
 
 
 
@@ -11,20 +13,34 @@ const GadgetsDetails = () => {
 
 
     const id = parseInt(gadgetId.GId)
+    const [isWished, setWished] = useState(false)
+    const [products, setProduct] = useState([])
+    useEffect(() => {
+        const details = [...data].find(gadget => gadget.product_id === id)
+        setProduct(details)
+        const wish = getStoredWish()
+        const isExist = wish.find(item => item.product_id === details.product_id)
+        if (isExist) {
+            setWished(true)
+        }
+    }, [data, id])
+    console.log(products);
 
 
-    const details = [...data].find(gadget => gadget.product_id === id)
-    const { product_image, product_title, product_id, price, availability, description, specification, rating } = details
+    const { product_image, product_title, product_id, price, availability, description, specification = [], rating } = products
 
     const handleWish = (wishGadget) => {
         addWishtToLs(wishGadget)
-        console.log('clicked');
+        setWished(true)
 
     }
     const handleCart = (gadget) => {
         addCartToLs(gadget)
 
     }
+
+
+
     return (
         <div>
             <DetailsTem title='Product Details' subtitle='Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'></DetailsTem>
@@ -46,7 +62,7 @@ const GadgetsDetails = () => {
                                     Specification:
                                 </h2>
                                 {
-                                    specification.map(specif => <p>{specif}</p>)
+                                    specification.map((specif, idx) => <p key={idx}>{specif}</p>)
                                 }
 
                             </div>
@@ -64,7 +80,7 @@ const GadgetsDetails = () => {
                                 <h1>{rating}</h1>
                             </div>
                             <div className="flex items-center gap-4">
-                                <button onClick={() => handleCart(details)} className="btn bg-[#9538E2] w-44 rounded-3xl text-white font-bold">Add To Cart  <svg
+                                <button onClick={() => handleCart(products)} className="btn bg-[#9538E2] w-44 rounded-3xl text-white font-bold">Add To Cart  <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5 text-white"
                                     fill="none"
@@ -77,8 +93,9 @@ const GadgetsDetails = () => {
                                         d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                                 </svg>
                                 </button>
-                                <button onClick={() => handleWish(details)}>
-                                    <img src={wish} alt="" />
+                                <button disabled={isWished} onClick={() => handleWish(products)} className="btn text-black rounded-full text-xl">
+                                    <FaRegHeart />
+
                                 </button>
                             </div>
                         </div>

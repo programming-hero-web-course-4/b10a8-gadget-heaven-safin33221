@@ -31,12 +31,13 @@ const Dashboard = () => {
             setAcive(false)
         }
     }
-
+    //remove cart form localstorage
     const handleRemoveCart = id => {
         removeCartFromLs(id)
         const gadgets = getStoredCart()
         setProduct(gadgets);
     }
+    //remove wish form localStorage
     const handleRemoveWish = id => {
         removeWishFromLs(id)
         const wishGadgets = getStoredWish()
@@ -56,10 +57,10 @@ const Dashboard = () => {
 
         const sum = wishProduct.reduce((a, b) => a + (b.price || 0), 0);
         setWishPrice(parseFloat(sum).toFixed(2))
-    }, [cartProducts])
+    }, [wishProduct])
 
     //sort by price
-    const handleSortBYPriceCart = () => {
+    const handleSortBYPrice = () => {
         if(isactive){
             
             const sortProduct = [...cartProducts].sort((a, b) => a.price - b.price)
@@ -99,7 +100,7 @@ const Dashboard = () => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <p className='font-bold'>Total Cost: {`${isactive ? cartPrice : wishPrice}`}</p>
-                    <button onClick={() => handleSortBYPriceCart()}
+                    <button onClick={() => handleSortBYPrice()}
                         className='btn btn-outline text-[#9538E2] rounded-3xl'>Sort by price</button>
                     <button 
                     className='btn bg-[#9538E2] text-white rounded-3xl px-6'>Purchace</button>
