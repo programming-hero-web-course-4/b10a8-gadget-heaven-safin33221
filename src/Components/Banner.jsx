@@ -11,7 +11,7 @@ const Banner = () => {
                     <div className=" text-white flex flex-col w-full">
                         
                         <div className="w-8/12 mx-auto">
-                            <h1 className="text-4xl font-bold">Upgrade your tech accessorize with Gadget Heaven Accessorize</h1>
+                            <h1 className="text-2xl  md:text-4xl font-bold">Upgrade your tech accessorize with Gadget Heaven Accessorize</h1>
                             <p className="py-2">
                                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                                 quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -22,7 +22,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className=" ">
-                <div className=" max-w-[800px] h-[350px] bg-cover flex mx-auto border-2 border-white p-4 rounded-lg relative bottom-40">
+                <div className="w-4/5 lg:max-w-[800px] h-[350px] bg-cover flex mx-auto border-2 border-white p-4 rounded-lg relative bottom-40">
                     <img className="w-full rounded-lg bg-cover" src={banner} alt="" />
                 </div>
             </div>

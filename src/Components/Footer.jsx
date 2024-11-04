@@ -9,7 +9,7 @@ const Footer = () => {
             </div>
             <div className="border-b mt-10 "></div>
 
-            <div className="footer  p-10 flex justify-center text-center gap-36">
+            <div className="footer  p-10 md:flex justify-center text-center md:gap-36">
                 <nav >
                     <h6 className="footer-title">Services</h6>
                     <a className="link link-hover">Products Supports</a>

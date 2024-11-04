@@ -94,12 +94,12 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-between items-center py-6 w-10/12 mx-auto'>
+            <div className='flex flex-col md:flex-row justify-between items-center py-6 w-10/12 mx-auto'>
                 <div>
                     <h1 className='text-lg font-bold'>{`${isactive ? "Cart" : "Wish"}`}</h1>
                 </div>
-                <div className='flex items-center gap-4'>
-                    <p className='font-bold'>Total Cost: {`${isactive ? cartPrice : wishPrice}`}</p>
+                <div className='flex flex-col md:flex-row items-center gap-4'>
+                    <p className='font-bold'>Total Cost: ${`${isactive ? cartPrice : wishPrice}`}</p>
                     <button onClick={() => handleSortBYPrice()}
                         className='btn btn-outline text-[#9538E2] rounded-3xl'>Sort by price</button>
                     <button 

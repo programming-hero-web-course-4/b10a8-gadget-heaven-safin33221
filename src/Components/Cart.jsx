@@ -6,7 +6,7 @@ const Cart = ({ cart,handleRemoveCart }) => {
     const { product_title, product_image, price, product_id, description } = cart
     
     return (
-        <div class=" w-4/5 border-2 mb-3 mx-auto bg-base-100  shadow-xl flex gap-8 rounded-lg ">
+        <div class=" w-4/5 border-2 mb-3 mx-auto bg-base-100  shadow-xl flex flex-col md:flex-row gap-8 p-4 rounded-lg ">
             <figure className=" ">
                 <img className="w-52"
                     src={product_image} />
