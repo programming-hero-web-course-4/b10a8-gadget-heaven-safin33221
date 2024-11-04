@@ -8,7 +8,7 @@ const Home = () => {
     const categories = useLoaderData()
     // console.log(categories);
     return (
-        <div>
+        <div className="rounded-3xl">
             <Banner></Banner>
 
             <div className="flex gap-5 w-10/12 mx-auto">
