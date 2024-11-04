@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { getStoredData } from './Utils/addToDB';
+import { getStoredCart, getStoredWish, removeCartFromLs, removeWishFromLs } from './Utils/addToDB';
 import DashboardDetails from './DashboardDetails';
-import Wish from './Wish';
+
 import Carts from './Carts';
+import Wishs from './Wishs';
 
 
 
@@ -10,17 +11,34 @@ const Dashboard = () => {
 
     const [cartProducts, setProduct] = useState([])
     useEffect(() => {
-        const gadgets = getStoredData();
+        const gadgets = getStoredCart()
         setProduct(gadgets);
+    }, [])
+
+    const [wishProduct, setWishProduct] = useState([])
+    useEffect(() => {
+        const wishGadgets = getStoredWish()
+        setWishProduct(wishGadgets)
     }, [])
 
     const [isactive, setAcive] = useState(true)
     const handleTogging = (active) => {
-        if(active){
+        if (active) {
             setAcive(true)
-        }else{
+        } else {
             setAcive(false)
         }
+    }
+
+    const handleRemoveCart = id => {
+        removeCartFromLs(id)
+        const gadgets = getStoredCart()
+        setProduct(gadgets);
+    }
+    const handleRemoveWish = id => {
+        removeWishFromLs(id)
+        const wishGadgets = getStoredWish()
+        setWishProduct(wishGadgets)
     }
     return (
         <div>
@@ -41,9 +59,13 @@ const Dashboard = () => {
             </div>
             <div>
                 {
-                   isactive?<Carts
-                   cartProducts={cartProducts}
-                   ></Carts>:<Wish></Wish>
+                    isactive ? <Carts
+                        cartProducts={cartProducts}
+                        handleRemoveCart={handleRemoveCart}
+                    ></Carts> : <Wishs
+                    wishProduct={wishProduct}
+                    handleRemoveWish={handleRemoveWish}
+                    ></Wishs>
                 }
 
             </div>

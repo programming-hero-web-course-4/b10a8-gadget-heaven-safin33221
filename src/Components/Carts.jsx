@@ -1,12 +1,16 @@
 import React from 'react';
 import Cart from './Cart';
 
-const Carts = ({cartProducts}) => {
-    console.log(cartProducts);
+const Carts = ({cartProducts,handleRemoveCart}) => {
+    
     return (
-        <div>
+        <div className='py-5'>
             {
-                cartProducts.map(cart => <Cart cart={cart}></Cart> )
+                
+                cartProducts.map(cart => <Cart cart={cart}
+                    handleRemoveCart={handleRemoveCart}
+                
+                ></Cart> )
             }
         </div>
     );

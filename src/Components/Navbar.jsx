@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { getStoredData } from "./Utils/addToDB";
+import { getStoredCart } from "./Utils/addToDB";
 import { useEffect, useState } from "react";
 
 
@@ -15,9 +15,11 @@ const Navbar = () => {
     </>
     const [products,setProduct] = useState([])
     useEffect(()=>{
-        const gadgets = getStoredData();
+        const gadgets = getStoredCart();
         setProduct(gadgets);
     },[])
+
+    
     
     
     
