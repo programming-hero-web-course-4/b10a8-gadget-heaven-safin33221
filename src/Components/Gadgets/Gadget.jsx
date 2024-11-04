@@ -12,7 +12,7 @@ const Gadget = ({ gadget }) => {
             </figure>
             <div class="card-body">
                 <h2 class="card-title">{product_title}</h2>
-                <p>Price: {price}K</p>
+                <p>Price: ${price}</p>
                 <div class="card-actions justify-start">
                     <NavLink to={`/details/${product_id}`}> <button class="btn btn-outline btn-primary">View Details</button></NavLink>
                 </div>
