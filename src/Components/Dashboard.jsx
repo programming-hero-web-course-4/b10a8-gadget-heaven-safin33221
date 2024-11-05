@@ -128,7 +128,7 @@ const Dashboard = () => {
 
                             <button onClick={() => handleTogging(false)}
                                 className={`${isactive ? "btn btn-xl bg-[#9538E2] px-10 rounded-3xl " : "text-[#9538E2] px-10 rounded-3xl bg-white btn btn-xl btn-outline font-extrabold"}`}>
-                                wish</button>
+                                Wishlist</button>
                         </div>
 
                     </div>

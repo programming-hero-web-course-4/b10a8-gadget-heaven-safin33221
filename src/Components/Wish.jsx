@@ -15,6 +15,7 @@ const Wish = ({wish,handleRemoveWish}) => {
                     <h2 class="card-title">{product_title}</h2>
                     <p>{description}</p>
                     <p>Price: ${price}</p>
+                    <button className='btn bg-[#9538E2] rounded-3xl my-3'>Add to Card</button>
                 </div>
                 <div onClick={()=>handleRemoveWish(product_id)} className='px-8'>
                     <button className='text-2xl btn '><MdDeleteOutline /></button>

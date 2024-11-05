@@ -11,21 +11,23 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/statistice'>Statistice</NavLink></li>
         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+        <li><NavLink to='/service'>Service</NavLink></li>
 
 
 
 
     </>
     if(location.pathname ==='/'){
-        document.title='Gadget || Home'
+        document.title='Gadget | Gadget Heaven'
     }else if(location.pathname ==='/statistice'){
-        document.title='Gadget || Statistice'
+        document.title='Statistice | Gadget Heaven'
     }else if(location.pathname ==='/dashboard'){
-        document.title='Gadget || Dashboard'
+        document.title='Dashboard | Gadget Heaven'
     }
-    else if(location.pathname ==='/details/:GId'){
-        document.title='Gadget || Details'
+    else if(location.pathname ==='/service'){
+        document.title='Service | Gadget Heaven'
     }
+    
 
 
     const [cartProducts, setCartProduct] = useState([])
@@ -55,7 +57,7 @@ const Navbar = () => {
     const homeRoute = location.pathname === '/' || location.pathname.startsWith('/gadgets/')
 
     return (
-        <div className={`navbar w-11/12 mx-auto  mt-4  ${homeRoute ? 'bg-[#9538E2] md:text-white rounded-lg' : 'bg-white'}`}>
+        <div className={`navbar w-11/12 mx-auto  mt-4  ${homeRoute ? 'bg-[#9538E2] rounded-lg' : 'bg-white'}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -111,7 +113,7 @@ const Navbar = () => {
                             className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
                             <div className="card-body">
                                 <span className="text-lg font-bold">{cartProducts.length} Items</span>
-                                <span className="text-info">Subtotal: ${cartPrice}</span>
+                                <span className="text-black">Subtotal: ${cartPrice}</span>
                                 <div className="card-actions">
                                     <Link to='/dashboard'><button className="btn btn-primary btn-block">View cart</button></Link>
                                 </div>

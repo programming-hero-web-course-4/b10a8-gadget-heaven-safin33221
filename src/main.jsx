@@ -14,7 +14,8 @@ import Dashboard from './Components/Dashboard';
 import GadgetsDetails from './Components/Gadgets/GadgetsDetails';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Services from './Components/Services';
+ 
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         path:'/dashboard',
         element:<Dashboard></Dashboard>
 
+      },
+      {
+        path:'/service',
+        element:<Services></Services>,
+        loader:()=>fetch('/service.json')
       },
       {
         path:'/details/:GId',

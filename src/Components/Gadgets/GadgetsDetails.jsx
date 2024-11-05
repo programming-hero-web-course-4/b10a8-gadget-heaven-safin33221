@@ -1,7 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsTem from "../DetailsTem";
 import { addCartToLs, addWishtToLs, getStoredWish } from "../Utils/addToDB";
-
 import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 
@@ -18,13 +17,14 @@ const GadgetsDetails = () => {
     useEffect(() => {
         const details = [...data].find(gadget => gadget.product_id === id)
         setProduct(details)
+        
         const wish = getStoredWish()
         const isExist = wish.find(item => item.product_id === details.product_id)
         if (isExist) {
             setWished(true)
         }
     }, [data, id])
-    console.log(products);
+    
 
 
     const { product_image, product_title, product_id, price, availability, description, specification = [], rating } = products

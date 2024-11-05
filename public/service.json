@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "title": "Warranty Service",
+      "description": "Comprehensive coverage for repairs and replacements.",
+      "details": "All gadgets come with a 1-year manufacturer warranty. Covers defects and malfunctions under normal usage conditions.",
+      "duration": "1 year",
+      "price": "Included with purchase",
+      "eligibility": "All gadgets purchased from Gadgets Heaven",
+      "contact": "support@gadgetsheaven.com",
+      "terms": "Warranty void if device is damaged due to misuse or unauthorized repairs."
+    },
+    {
+      "id": 2,
+      "title": "Guarantee Policy",
+      "description": "30-day money-back guarantee for all purchases.",
+      "details": "If you are not satisfied with your product, return it within 30 days for a full refund, no questions asked.",
+      "duration": "30 days from purchase",
+      "price": "Free",
+      "eligibility": "Applies to all products in unused condition",
+      "contact": "returns@gadgetsheaven.com",
+      "terms": "Product must be returned in original packaging and in sellable condition."
+    },
+    {
+      "id": 3,
+      "title": "Extended Warranty",
+      "description": "Option to extend warranty coverage for up to 3 years.",
+      "details": "Choose between 1, 2, or 3-year extended warranties to safeguard your gadget against future issues.",
+      "duration": "1, 2, or 3 years",
+      "price": "$49.99 per year",
+      "eligibility": "Gadgets within 30 days of purchase",
+      "contact": "extendedwarranty@gadgetsheaven.com",
+      "terms": "Extended warranty is non-refundable and cannot be transferred to another device."
+    },
+    {
+      "id": 4,
+      "title": "Customer Support",
+      "description": "24/7 customer support for all products and services.",
+      "details": "Our team is available around the clock to assist you with any product issues or inquiries.",
+      "duration": "24/7 access",
+      "price": "Free",
+      "eligibility": "All customers",
+      "contact": "help@gadgetsheaven.com",
+      "terms": "Support is limited to inquiries related to purchased products."
+    },
+    {
+      "id": 5,
+      "title": "Insurance Plans",
+      "description": "Comprehensive gadget insurance to cover accidental damage.",
+      "details": "Choose from basic, standard, or premium plans to protect against accidental drops, spills, and theft.",
+      "duration": "Monthly or yearly",
+      "price": "Starting at $9.99/month",
+      "eligibility": "All devices in good working condition",
+      "contact": "insurance@gadgetsheaven.com",
+      "terms": "Insurance does not cover intentional damage or loss."
+    },
+    {
+      "id": 6,
+      "title": "Product Installation",
+      "description": "Professional setup and installation of your new gadget.",
+      "details": "Our team provides installation and setup for complex gadgets, ensuring a smooth experience from day one.",
+      "duration": "One-time setup service",
+      "price": "$29.99",
+      "eligibility": "Available for select gadgets",
+      "contact": "installation@gadgetsheaven.com",
+      "terms": "Installation must be scheduled within 14 days of purchase."
+    },
+    {
+      "id": 7,
+      "title": "Tech Support Membership",
+      "description": "Exclusive membership for priority tech support.",
+      "details": "With a membership, enjoy priority access to tech support, special discounts, and on-site assistance.",
+      "duration": "1 year",
+      "price": "$99.99 per year",
+      "eligibility": "Available to all customers",
+      "contact": "techmembership@gadgetsheaven.com",
+      "terms": "Membership is non-refundable and renews annually unless canceled."
+    },
+    {
+      "id": 8,
+      "title": "Product Exchange",
+      "description": "Hassle-free product exchange within 30 days.",
+      "details": "Easily exchange your product within 30 days of purchase if it fails to meet your expectations.",
+      "duration": "30 days from purchase",
+      "price": "Free for first exchange",
+      "eligibility": "Applies to unused products",
+      "contact": "exchanges@gadgetsheaven.com",
+      "terms": "Product must be returned in original packaging. Only one exchange allowed per product."
+    },
+    {
+      "id": 9,
+      "title": "Recycling Program",
+      "description": "Eco-friendly recycling options for old gadgets.",
+      "details": "Dispose of your old devices responsibly through our recycling program and earn loyalty points.",
+      "duration": "Available year-round",
+      "price": "Free",
+      "eligibility": "Applies to old and non-functional gadgets",
+      "contact": "recycling@gadgetsheaven.com",
+      "terms": "Recycling is only available for specific gadget categories."
+    },
+    {
+      "id": 10,
+      "title": "Repair Service",
+      "description": "Professional repair services for out-of-warranty gadgets.",
+      "details": "Our skilled technicians provide repairs for a range of issues, from screen replacements to battery replacements.",
+      "duration": "Varies by repair",
+      "price": "Starting at $49.99",
+      "eligibility": "Available for out-of-warranty products",
+      "contact": "repairs@gadgetsheaven.com",
+      "terms": "Prices vary based on parts and labor. Warranty is not extended after repairs."
+    }
+  ]
+  
