@@ -50,6 +50,9 @@ const removeCartFromLs = (id) => {
 
 
 }
+const revomeAllCartFromLs = ()=>{
+    localStorage.removeItem('cart')
+}
 
 //this section for add wish list in localStorage
 
@@ -100,5 +103,8 @@ const removeWishFromLs = (id) => {
 
 
 }
+const revomeAllWishFromLs = ()=>{
+    localStorage.removeItem('wish')
+}
 
-export { getStoredCart, addCartToLs, removeCartFromLs, addWishtToLs, getStoredWish, removeWishFromLs }
+export { getStoredCart, addCartToLs, removeCartFromLs, addWishtToLs, getStoredWish, removeWishFromLs,revomeAllCartFromLs,revomeAllWishFromLs }

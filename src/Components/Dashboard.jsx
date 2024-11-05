@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { getStoredCart, getStoredWish, removeCartFromLs, removeWishFromLs } from './Utils/addToDB';
-import DashboardDetails from './DashboardDetails';
+import { getStoredCart, getStoredWish, removeCartFromLs, removeWishFromLs, revomeAllCartFromLs, revomeAllWishFromLs } from './Utils/addToDB';
+
 
 import Carts from './Carts';
 import Wishs from './Wishs';
 import paymentLogo from '../assets/Group.png'
+import { Link } from 'react-router-dom';
 
 
 
 const Dashboard = () => {
+    
     //cart data form localStorage
     const [cartProducts, setProduct] = useState([])
     useEffect(() => {
@@ -75,11 +77,25 @@ const Dashboard = () => {
 
     }
     const modal = document.getElementById('my_modal_1')
-    
+
     const openModal = () => {
         modal.showModal()
     }
-    
+
+    const handleModalClose = (active) => {
+        if (active) {
+            revomeAllCartFromLs()
+            setProduct([])
+        } else {
+            revomeAllWishFromLs()
+            setWishProduct([])
+        }
+        if(modal){
+            modal.close()
+        }
+        
+    }
+
 
     return (
         <div>
@@ -125,12 +141,12 @@ const Dashboard = () => {
                 }
 
             </div>
-            
+
             {/* modal for purchace button */}
             <dialog id="my_modal_1" className="modal">
                 <div className="modal-box text-center">
                     <div className='flex justify-center'>
-                    <img src={paymentLogo} alt="" />
+                        <img src={paymentLogo} alt="" />
                     </div>
                     <p className="py-4 text-2xl font-bold">Payment Successfully</p>
                     <div className='border-t'></div>
@@ -139,7 +155,8 @@ const Dashboard = () => {
                     <div className=" ">
                         <form method="dialog ">
                             {/* if there is a button in form, it will close the modal */}
-                            <button className="btn flex w-2/3 mx-auto rounded-3xl font-bold">Close</button>
+                            <Link to='/'><button onClick={() => handleModalClose(isactive)}
+                                className="btn flex w-2/3 mx-auto rounded-3xl font-bold">Close</button></Link>
                         </form>
                     </div>
                 </div>
