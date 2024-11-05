@@ -4,6 +4,7 @@ import DashboardDetails from './DashboardDetails';
 
 import Carts from './Carts';
 import Wishs from './Wishs';
+import paymentLogo from '../assets/Group.png'
 
 
 
@@ -61,18 +62,24 @@ const Dashboard = () => {
 
     //sort by price
     const handleSortBYPrice = () => {
-        if(isactive){
-            
+        if (isactive) {
+
             const sortProduct = [...cartProducts].sort((a, b) => a.price - b.price)
             setProduct(sortProduct)
-        }else{
+        } else {
             const sortWishProduct = [...wishProduct].sort((a, b) => a.price - b.price)
             setWishProduct(sortWishProduct)
-            
+
         }
 
 
     }
+    const modal = document.getElementById('my_modal_1')
+    
+    const openModal = () => {
+        modal.showModal()
+    }
+    
 
     return (
         <div>
@@ -102,8 +109,8 @@ const Dashboard = () => {
                     <p className='font-bold'>Total Cost: ${`${isactive ? cartPrice : wishPrice}`}</p>
                     <button onClick={() => handleSortBYPrice()}
                         className='btn btn-outline text-[#9538E2] rounded-3xl'>Sort by price</button>
-                    <button 
-                    className='btn bg-[#9538E2] text-white rounded-3xl px-6'>Purchace</button>
+                    <button onClick={openModal}
+                        className='btn bg-[#9538E2] text-white rounded-3xl px-6'>Purchase</button>
                 </div>
             </div>
             <div>
@@ -118,6 +125,25 @@ const Dashboard = () => {
                 }
 
             </div>
+            
+            {/* modal for purchace button */}
+            <dialog id="my_modal_1" className="modal">
+                <div className="modal-box text-center">
+                    <div className='flex justify-center'>
+                    <img src={paymentLogo} alt="" />
+                    </div>
+                    <p className="py-4 text-2xl font-bold">Payment Successfully</p>
+                    <div className='border-t'></div>
+                    <p>Thanks for Purchasing</p>
+                    <p>Total: ${`${isactive ? cartPrice : wishPrice}`}</p>
+                    <div className=" ">
+                        <form method="dialog ">
+                            {/* if there is a button in form, it will close the modal */}
+                            <button className="btn flex w-2/3 mx-auto rounded-3xl font-bold">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </div>
     );
 };
