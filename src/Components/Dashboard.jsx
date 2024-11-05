@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const Dashboard = () => {
-    
+
     //cart data form localStorage
     const [cartProducts, setProduct] = useState([])
     useEffect(() => {
@@ -66,10 +66,10 @@ const Dashboard = () => {
     const handleSortBYPrice = () => {
         if (isactive) {
 
-            const sortProduct = [...cartProducts].sort((a, b) => a.price - b.price)
+            const sortProduct = [...cartProducts].sort((a, b) => b.price - a.price)
             setProduct(sortProduct)
         } else {
-            const sortWishProduct = [...wishProduct].sort((a, b) => a.price - b.price)
+            const sortWishProduct = [...wishProduct].sort((a, b) => b.price - a.price)
             setWishProduct(sortWishProduct)
 
         }
@@ -90,11 +90,28 @@ const Dashboard = () => {
             revomeAllWishFromLs()
             setWishProduct([])
         }
-        if(modal){
-            modal.close()
-        }
-        
+
+
     }
+    const [iscartParchase, seCartParchase] = useState(false)
+    useEffect(() => {
+        if(cartProducts.length === 0){
+            seCartParchase(true)
+        }
+        else{
+            seCartParchase(false)
+        }
+    }, [cartProducts])
+    const [isWishParchase, setWishParchase] = useState(false)
+    useEffect(() => {
+        if(wishProduct.length === 0){
+            setWishParchase(true)
+        }
+        else{
+            setWishParchase(false)
+        }
+    }, [wishProduct])
+    
 
 
     return (
@@ -126,7 +143,7 @@ const Dashboard = () => {
                     <button onClick={() => handleSortBYPrice()}
                         className='btn btn-outline text-[#9538E2] rounded-3xl'>Sort by price</button>
                     <button onClick={openModal}
-                        className='btn bg-[#9538E2] text-white rounded-3xl px-6'>Purchase</button>
+                        className='btn bg-[#9538E2] text-white rounded-3xl px-6' disabled={isactive?iscartParchase:isWishParchase}>Purchase</button>
                 </div>
             </div>
             <div>

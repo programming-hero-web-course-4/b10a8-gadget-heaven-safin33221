@@ -117,23 +117,7 @@
         "availability": true,
         "rating": 4.1
     },
-    {
-        "product_id": 8,
-        "product_title": "RAVPower 20000mAh Power Bank",
-        "product_image": "https://i.ibb.co.com/2svQsdV/8.jpg",
-        "category": "Power Banks",
-        "price": 35.99,
-        "description": "High-capacity power bank with dual USB outputs for charging multiple devices.",
-        "specification": [
-            "20000mAh capacity",
-            "Dual USB output",
-            "Fast charging support",
-            "LED battery indicator",
-            "Compact design"
-        ],
-        "availability": true,
-        "rating": 4.4
-    },
+    
     {
         "product_id": 9,
         "product_title": "Microsoft Surface Laptop 4",

@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { getStoredCart, getStoredWish } from "./Utils/addToDB";
 import { useEffect, useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 const Navbar = () => {
     const location = useLocation()
+    
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/statistice'>Statistice</NavLink></li>
@@ -15,6 +16,16 @@ const Navbar = () => {
 
 
     </>
+    if(location.pathname ==='/'){
+        document.title='Gadget || Home'
+    }else if(location.pathname ==='/statistice'){
+        document.title='Gadget || Statistice'
+    }else if(location.pathname ==='/dashboard'){
+        document.title='Gadget || Dashboard'
+    }
+    else if(location.pathname ==='/details/:GId'){
+        document.title='Gadget || Details'
+    }
 
 
     const [cartProducts, setCartProduct] = useState([])
@@ -34,7 +45,7 @@ const Navbar = () => {
     const [wishProducts, setWishProducts] = useState([])
     useEffect(() => {
         const wishGadgets = getStoredWish()
-        setWishProducts(wishGadgets)
+        setWishProducts(wishGadgets) 
     }, [])
 
 
@@ -44,7 +55,7 @@ const Navbar = () => {
     const homeRoute = location.pathname === '/' || location.pathname.startsWith('/gadgets/')
 
     return (
-        <div className={`navbar w-11/12 mx-auto  mt-4  ${homeRoute ? 'bg-[#9538E2] rounded-lg' : 'bg-white'}`}>
+        <div className={`navbar w-11/12 mx-auto  mt-4  ${homeRoute ? 'bg-[#9538E2] md:text-white rounded-lg' : 'bg-white'}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,7 +78,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl">Gaget Heaven</a>
+                <a className="btn btn-ghost text-2xl font-bold">Gaget Heaven</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -102,7 +113,7 @@ const Navbar = () => {
                                 <span className="text-lg font-bold">{cartProducts.length} Items</span>
                                 <span className="text-info">Subtotal: ${cartPrice}</span>
                                 <div className="card-actions">
-                                    <button className="btn btn-primary btn-block">View cart</button>
+                                    <Link to='/dashboard'><button className="btn btn-primary btn-block">View cart</button></Link>
                                 </div>
                             </div>
                         </div>
