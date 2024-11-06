@@ -3,7 +3,7 @@
 Welcome to **Gadget Heaven**! Explore our platform showcasing the latest gadgets and accessories with a seamless user experience.
 
 ## 🔗 Live Website
-Visit the live site here: [Gadget Heaven](https://remarkable-speculoos-7456f5.netlify.app/)
+Visit the live site here: [Gadget Heaven](https://safin33221-assignment-8.netlify.app/)
 
 ## 📄 Requirements Document
 Find the requirements for this project here: [Requirements Document](https://drive.google.com/file/d/1Tp_TTAJq45_8ZcA2pSUlVBL-Kxqg0FTq/view?usp=sharing)
