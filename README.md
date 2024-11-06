@@ -24,6 +24,7 @@ This project is built using fundamental React concepts, including:
 3. **Sorting Functionality**: Users can sort items by price, enhancing the shopping experience.
 4. **Responsive UI**: Fully responsive design, ensuring a seamless experience across devices.
 5. **Confirmation Modal for Purchases**: A confirmation modal appears after purchasing, giving a polished completion to the transaction flow.
+6. **chart**:Chart will show Gadgets title and price in statistics route.
 
 ## 📦 Technologies Used
 - **React**
