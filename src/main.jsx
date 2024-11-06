@@ -15,12 +15,14 @@ import GadgetsDetails from './Components/Gadgets/GadgetsDetails';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Services from './Components/Services';
+import ErrorPage from './ErrorPage';
  
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
