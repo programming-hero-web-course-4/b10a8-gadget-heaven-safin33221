@@ -1,12 +1,11 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "./Components/Banner";
-import Gadgets from "./Components/Gadgets/Gadgets";
 import Category from "./Components/Gadgets/Category";
 
 
 const Home = () => {
     const categories = useLoaderData()
-    // console.log(categories);
+    
     return (
         <div className="rounded-3xl  ">
             <Banner></Banner> 

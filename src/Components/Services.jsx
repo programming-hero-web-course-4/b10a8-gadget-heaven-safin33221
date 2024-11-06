@@ -4,7 +4,6 @@ import Service from './Service';
 
 const Services = () => {
     const data = useLoaderData()
-    console.log(data);
     return (
         <div>
             <div className="hero bg-[#9538E2]  text-white">
