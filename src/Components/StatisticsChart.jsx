@@ -17,7 +17,7 @@ const StatisticsChart = ({ data }) => {
     return (
         <div className="flex flex-col items-center">
             <div>
-                <h1 className="font-bold text-2xl md:text-3xl">Statistics</h1>
+                <h1 className="font-bold text-2xl md:text-3xl ">Statistics</h1>
             </div>
             <div className="w-full overflow-x-auto">
                 <BarChart

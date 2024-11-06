@@ -33,7 +33,7 @@ const addCartToLs = (gadget) => {
 
         cart.push(gadget)
         localStorage.setItem('cart', JSON.stringify(cart))
-        toast.success('Added successful', {
+        toast.success('Added cart successful', {
             position: "top-right",
             autoClose: 1000,
             hideProgressBar: false,
@@ -46,6 +46,13 @@ const removeCartFromLs = (id) => {
     const carts = getStoredCart()
     const remaining = carts.filter(cart => cart.product_id !== id)
     localStorage.setItem('cart', JSON.stringify(remaining))
+    toast.success('removed cart successful', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+    })
 
 
 
@@ -86,7 +93,7 @@ const addWishtToLs = (gadget) => {
 
         wish.push(gadget)
         localStorage.setItem('wish', JSON.stringify(wish))
-        toast.success('Added successful', {
+        toast.success('Added wish successful', {
             position: "top-right",
             autoClose: 1000,
             hideProgressBar: false,
@@ -99,6 +106,13 @@ const removeWishFromLs = (id) => {
     const wishs = getStoredWish()
     const remaining = wishs.filter(cart => cart.product_id !== id)
     localStorage.setItem('wish', JSON.stringify(remaining))
+    toast.success('removed Wish successful', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+    })
 
 
 

@@ -12,9 +12,8 @@ const Banner = () => {
 
                         <div className="w-8/12 mx-auto">
                             <h1 className="text-2xl  md:text-4xl font-bold">Upgrade your tech accessorize with Gadget Heaven Accessorize</h1>
-                            <p className="py-2">
-                                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                                quasi. In deleniti eaque aut repudiandae et a id nisi.
+                            <p className="py-2 text-gray-300">
+                                Explore the latest in innovative gadgets and stylish accessories for every tech enthusiast!
                             </p>
                             <Link to='/dashboard'><button className="btn bg-white rounded-3xl text-[#9538E2] font-bold mb-10">Shop now</button></Link>
                         </div>

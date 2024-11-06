@@ -120,8 +120,8 @@ const Dashboard = () => {
                 <div className="hero-content text-center">
                     <div className="max-w-md">
                         <h1 className="text-5xl font-bold">Dashboard</h1>
-                        <p className="py-6">
-                            Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
+                        <p className="py-6 text-gray-300">
+                        Effortlessly manage and analyze routes with real-time insights and performance tracking.
                         </p>
                         <div className=' flex justify-center gap-4 font-extrabold'>
                             <button onClick={() => handleTogging(true)} className={`${isactive ? "text-[#9538E2] bg-white btn btn-xl btn-outline px-10 rounded-3xl font-extrabold" : "btn bg-[#9538E2] btn-xl px-10 rounded-3xl "}`}>Cart</button>

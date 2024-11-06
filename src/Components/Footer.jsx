@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className=" shadow-md mt-8 bg-gray-100 py-5" >
             <div className="text-center">
                 <h1 className="text-4xl font-bold my-2">Gadget Heaven</h1>
-                <p className="text-lg">Leading the way in cutting-edge technology and innovation.</p>
+                <p className="text-lg">our ultimate destination for cutting-edge gadgets and accessories.</p>
             </div>
             <div className="border-b mt-10 "></div>
 
