@@ -16,7 +16,7 @@ This project is built using fundamental React concepts, including:
 - **Props**: Sharing data among components to create a cohesive user experience.
 
 ## 📊 Data Handling and Management
-- **Local Storage**: Used to store cart and wishlist data, allowing persistent state across user sessions without requiring a backend.
+- **Local Storage**: Used Local Storage to store cart and wishlist data.
 
 ## 🌟 Features
 1. **Interactive Cart and Wishlist**: Users can add or remove items in real time with data saved locally.
@@ -30,6 +30,7 @@ This project is built using fundamental React concepts, including:
 - **React Router**
 - **Local Storage**
 - **CSS Framework (TailwindCSS)**
+- **Daisy Ui**
 
 ---
 

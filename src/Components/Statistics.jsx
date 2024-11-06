@@ -1,7 +1,10 @@
 import React from 'react';
+import StatisticsChart from './StatisticsChart';
+import { useLoaderData } from 'react-router-dom';
 
 
 const Statistics = () => {
+    const data = useLoaderData()
     return (
         <div>
 
@@ -16,6 +19,12 @@ const Statistics = () => {
 
                     </div>
                 </div>
+            </div>
+            <div className='flex justify-center py-10'>
+
+                <StatisticsChart
+                data={data}
+                ></StatisticsChart>
             </div>
         </div>
     );
