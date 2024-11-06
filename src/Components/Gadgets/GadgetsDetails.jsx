@@ -43,7 +43,7 @@ const GadgetsDetails = () => {
 
     return (
         <div>
-            <DetailsTem title='Product Details' subtitle='Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'></DetailsTem>
+            <DetailsTem title='Product Details' subtitle='Explore features, specifications, and everything you need to make informed choices.'></DetailsTem>
             <div className="border-2 m-3 max-w-[800px]  mx-auto relative bottom-32 p-3 rounded-lg border-white">
                 <div className=" bg-white shadow-lg   ">
                     <div className="hero-content flex-col lg:flex-row">
